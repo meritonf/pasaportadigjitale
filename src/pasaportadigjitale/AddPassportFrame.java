@@ -7,6 +7,7 @@ package pasaportadigjitale;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import theClasses.Person;
 
@@ -270,6 +271,7 @@ public class AddPassportFrame extends javax.swing.JFrame {
     public void setParentWindow(PassportViewFrame parentWindow) {
         this.parentWindow = parentWindow;
     }
+
     
 private void addPassport() {
     

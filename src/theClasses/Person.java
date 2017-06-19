@@ -59,14 +59,14 @@ public class Person {
         this.Gender="M";
         this.personalNumber=000000;
     }
-     public Person(JSONObject bookObject) {
+     public Person(JSONObject passportObject) {
     
         try{
-            this.name = bookObject.getString("name");
-            this.lastname = bookObject.getString("lastname");
-            this.personalNumber = (long)bookObject.getDouble("personalNumber");
+            this.name = passportObject.getString("name");
+            this.lastname = passportObject.getString("lastname");
+            this.personalNumber = (long)passportObject.getDouble("personalNumber");
 
-            JSONObject issueDate = bookObject.getJSONObject("issueDate");
+            JSONObject issueDate = passportObject.getJSONObject("issueDate");
 
             this.date = new Date(issueDate.getInt("year"), 
                                     issueDate.getInt("month"), 

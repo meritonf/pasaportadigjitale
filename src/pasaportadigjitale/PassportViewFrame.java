@@ -204,7 +204,6 @@ public class PassportViewFrame extends javax.swing.JFrame {
 
     private void lstPassportsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstPassportsMouseClicked
         // TODO add your handling code here:
-        setPassportList(pList);
         loadInformation(lstPassports.getSelectedValue());
        
     }//GEN-LAST:event_lstPassportsMouseClicked
@@ -278,10 +277,10 @@ public class PassportViewFrame extends javax.swing.JFrame {
     
     private void showAddpassportFrame() {
     
-        AddPassportFrame addBookFrame = new AddPassportFrame();
-        addBookFrame.setpersonlist(pList);
-        addBookFrame.setParentWindow(this);
-        addBookFrame.setVisible(true);
+        AddPassportFrame addpassportFrame = new AddPassportFrame();
+        addpassportFrame.setpersonlist(pList);
+        addpassportFrame.setParentWindow(this);
+        addpassportFrame.setVisible(true);
     }
     
     public void refreshpassportList() {
