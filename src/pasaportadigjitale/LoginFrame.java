@@ -82,9 +82,10 @@ public class LoginFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
+        if(fldPassword != null){
         PassportViewFrame passportViewFrame = new PassportViewFrame();
         passportViewFrame.setVisible(true);
-        dispose();
+        dispose();}
     }//GEN-LAST:event_btnLoginMouseClicked
 
     /**

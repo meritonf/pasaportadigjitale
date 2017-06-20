@@ -265,7 +265,7 @@ public class PassportViewFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtPersonalNumber;
     // End of variables declaration//GEN-END:variables
 
-    private ArrayList<Person> pList;
+    private ArrayList<Person> pList=new ArrayList<>();
     private String dbFile = "C:\\Users\\lenovo\\Desktop\\passport.txt";
     
     public void setPassportList(ArrayList<Person> pList) {
@@ -278,9 +278,14 @@ public class PassportViewFrame extends javax.swing.JFrame {
     private void showAddpassportFrame() {
     
         AddPassportFrame addpassportFrame = new AddPassportFrame();
-        addpassportFrame.setpersonlist(pList);
+      //  addpassportFrame.setpersonlist(pList);
         addpassportFrame.setParentWindow(this);
         addpassportFrame.setVisible(true);
+    }
+    
+    public void addPerson(Person person) {
+    
+        pList.add(person);
     }
     
     public void refreshpassportList() {

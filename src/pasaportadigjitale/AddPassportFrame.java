@@ -61,6 +61,12 @@ public class AddPassportFrame extends javax.swing.JFrame {
 
         lblLastName.setText("     Last Name");
 
+        txtLastNamefield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLastNamefieldActionPerformed(evt);
+            }
+        });
+
         lblPersonalNumber.setText("Personal Number");
 
         lblNationality.setText("     Nationality");
@@ -197,10 +203,14 @@ public class AddPassportFrame extends javax.swing.JFrame {
     
     
     private void btnAddPassportMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddPassportMouseClicked
-        // TODO add your handling code here:
+        // TODO add your handling code here:u
         addPassport();
         
     }//GEN-LAST:event_btnAddPassportMouseClicked
+
+    private void txtLastNamefieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLastNamefieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLastNamefieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,16 +295,18 @@ private void addPassport() {
         
             long personalNum = Integer.parseInt(txtPersonalNumber.getText());
             //int issueDate=Integer.parseInt(txtIssueDate.getText());
-            int dueDay = Integer.parseInt(txtIssueDay.getText());
-            int dueMonth = Integer.parseInt(txtIssueMonth.getText());
-            int dueYear = Integer.parseInt(txtIssueYear.getText());
+            int Day = Integer.parseInt(txtIssueDay.getText());
+            int Month = Integer.parseInt(txtIssueMonth.getText());
+            int Year = Integer.parseInt(txtIssueYear.getText());
         
             
             Person newPerson;
             newPerson = new Person(name, 
-                    new Date(dueYear, dueMonth, dueDay),lastname,nationality,personalNum,birthplace);
+                    new Date(Year, Month, Day),lastname,nationality,personalNum,birthplace);
             
-     
+            parentWindow.addPerson(newPerson);
+            
+                   parentWindow.refreshpassportList();
             
             this.setVisible(false);
         }
